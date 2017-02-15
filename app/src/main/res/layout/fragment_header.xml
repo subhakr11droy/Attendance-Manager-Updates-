@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    android:background="@drawable/drawer_background">
+
+    <ImageView
+        android:id="@+id/user_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="45dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:src="@mipmap/ic_account_circle_white_36dp"
+        android:transitionName="profile_image_transition" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="55dp"
+        android:layout_toRightOf="@+id/user_img"
+        android:text="Michell"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:transitionName="profile_name_transition" />
+
+    <TextView
+        android:id="@+id/overall_perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_text"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/user_img"
+        android:text="Overall: 85%"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:transitionName="Overall_perc_transition" />
+
+    <TextView
+        android:id="@+id/time_table_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/user_img"
+        android:layout_marginRight="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawableTop="@mipmap/ic_date_range_white_36dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Timetable"
+        android:textColor="#fff"
+        android:textSize="13sp" />
+</RelativeLayout>

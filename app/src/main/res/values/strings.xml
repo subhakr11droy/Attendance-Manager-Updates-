@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Attendance Manager</string>
+    <string-array name="tabs">
+        <item>MON</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+        <item>SAT</item>
+        <item>SUN</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="customize">Customize</string>
+    <string name="show_dialog">Show Dialog</string>
+    <string name="undo">Undo</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5668749787137425/9114260597</string>
+
+
+    <string name="chooseAvatar">Choose your Avatar</string>
+
+    <string name="enter_name">Enter your name</string>
+    <string name="enter_criteria">Enter attendance criteria</string>
+    <string name="enter_name_criteria">Enter your name</string>
+    <string name="overall_attendance_activity">Overall Attendance</string>
+    <string name="settings_activity">Settings</string>
+    <string name="edit_name_criteria">Edit name and criteria</string>
+    <string name="edit_subjects">Edit subjects</string>
+    <string name="edit_timetable">Edit timetable</string>
+    <string name="import_export">Backup data</string>
+    <string name="reset_attendance">Reset attendance</string>
+    <string name="reset_attendance_message">Do you wish to reset your attendance?</string>
+    <string name="subject_blank">Subject cannot be empty</string>
+    <string name="subject_entry_same">Subject already entered</string>
+    <string name="timetable_activity">Time Table</string>
+    <string name="weekly_subjects">Weekly Subjects</string>
+
+
+    <string name="attended">Attended</string>
+    <string name="total">Total</string>
+    <string name="on_track_message">You are on the track !</string>
+    <string name="noClasses">No classes yet </string>
+    <string name="present">PRESENT</string>
+    <string name="absent">ABSENT</string>
+    <string name="noClass">NO CLASS</string>
+
+
+    <string name="option_yes">Yes</string>
+    <string name="option_no">No</string>
+    <string name="option_cancel">Cancel</string>
+    <string name="option_ok">Ok</string>
+
+
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
+
+    <string name="add_sub_help">Click on \'+\' to add multiple subjects at a time and delete icon to remove from last.</string>
+    <string name="weekly_subjects_help">Add your day-wise timetable here</string>
+    <string name="subjects_help">Add your subjects here</string>
+    <string name="subject_del_help">Swipe RIGHT to delete or LEFT to edit.</string>
+    <string name="timetable_del_help">Swipe RIGHT on subject to delete.</string>
+    <string name="need_break_text">Get the number of classes you can miss freely.\nYou need a break right?\nNote: This works only when your attendance is greater than criteria.</string>
+
+
+    <string name="setting_up_timetable">•Click on the \'+\' button.\n•Select the subjects which you have on that day.\n•You can add multiple subjects in one day.</string>
+    <string name="adding_attendance">•Swipe left on any subject to add your attendance.\n•Swipe right to undo your attendance for that day.</string>
+
+    <string name="adding_extraClasses">•Click on the \'+\' button.\n•All the subjects which are not on that day are displayed.</string>
+    <string name="shortcut_add_attendance">•Hold on the \'+\'button and add your attendance.</string>
+    <string name="detailed_analysis">•Select the subject to view day wise analytics.\n•Select a date to get detailed analytics for the subject on that day itself.</string>
+
+    <string name="gotodate">•Select a previous date to enter your attendance in case you forgot :P</string>
+    <string name="predictor">•Predict your percentage by entering  number of classes attended or number of classes bunked!</string>
+
+    <string name="predictor_help">Predict your percentage by entering  number of classes attended or bunked!
+        \n\nThink for a while you are on a holiday and you won\'t be able to attend your classes.
+        \n\nRelax! Just input the number of classes you gonna miss and we\'ll predict your percentage!</string>
+
+
+    <string-array name="viewpager_title">
+        <item>Confused about how to manage your attendance?</item>
+        <item>Tedious tracking your day-to-day attendance?</item>
+        <item>Sit back and relax  </item>
+    </string-array>
+
+    <string-array name="viewpager_desc">
+        <item>Let\'s do that for you!</item>
+        <item>Take a look at Detailed Analysis</item>
+        <item>Say hello to Attendance Manager</item>
+    </string-array>
+</resources>

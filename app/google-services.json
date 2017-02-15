@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "723926795509",
+    "firebase_url": "https://attendance-manager-dd779.firebaseio.com",
+    "project_id": "attendance-manager-dd779",
+    "storage_bucket": "attendance-manager-dd779.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723926795509:android:8ef0d7d069a700e5",
+        "android_client_info": {
+          "package_name": "dotinc.attendancemanager2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723926795509-r5stt89n33dp62ncvrpj1tie7s8aaah9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dotinc.attendancemanager2",
+            "certificate_hash": "21787BDE24EEE074DAF39517E1B893A627EB6A78"
+          }
+        },
+        {
+          "client_id": "723926795509-v3n5v2haas9bnuio32ipnfmh5i58oc0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB01eZat_b3FEm7b-9dkhTSM7kxXXumrPY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
