@@ -75,10 +75,12 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
             bunk_switch.setChecked(true);
         }
 
-        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
+//        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+//                Settings.Secure.ANDROID_ID);
+
+
         NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView);
-        nativeExpressAdView.loadAd(new AdRequest.Builder().addTestDevice(android_id).build());
+        nativeExpressAdView.loadAd(new AdRequest.Builder().build());
     }
 
     @Override
@@ -147,7 +149,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
 
         ArrayList<String> options = new ArrayList<>();
         options.add(getResources().getString(R.string.edit_name_criteria));
-        options.add("Previous Attendance");
+        options.add("Add past attendance");
         options.add(getResources().getString(R.string.edit_subjects));
         options.add(getResources().getString(R.string.edit_timetable));
         options.add(getResources().getString(R.string.import_export));
@@ -174,8 +176,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
                         .putExtra("Settings", true));
                 break;
             case 1:
-                startActivity(new Intent(this, NameAndCriteriaActivity.class)
-                        .putExtra("Settings", true));
+                startActivity(new Intent(this, PrevAttendanceActivity.class));
                 break;
             case 2:
                 startActivity(new Intent(this, SubjectsActivity.class)
@@ -204,6 +205,7 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         attendanceDb.deleteAllEntries();
+                        subjectDb.resetAttendance();
                     }
                 });
                 builder.create().show();

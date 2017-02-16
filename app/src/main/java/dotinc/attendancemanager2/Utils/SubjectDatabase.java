@@ -81,6 +81,8 @@ public class SubjectDatabase extends SQLiteOpenHelper {
                 SubjectsList subjectsList = new SubjectsList();
                 subjectsList.setId(cursor.getInt(0));
                 subjectsList.setSubjectName(cursor.getString(1));
+                subjectsList.setPast_attended_classes(cursor.getInt(2));
+                subjectsList.setPast_total_classes(cursor.getInt(3));
                 SubjectName.add(subjectsList);
 
             } while (cursor.moveToNext());
@@ -90,12 +92,16 @@ public class SubjectDatabase extends SQLiteOpenHelper {
         return SubjectName;
     }
 
-    public void addPastAttendace(int subject_id ,  int attended_classes , int total_classes){
+    public void addPastAttendace(ArrayList<SubjectsList> subjectsLists){
         SQLiteDatabase database = this.getWritableDatabase();
-        String query = "UPDATE " + Subjects_Table + " SET " + past_total_classes + " = " + total_classes+
-                " , " + past_attended_classes + " = "+ attended_classes+
-                " WHERE " + Subject_Id + " = " + subject_id;
-        database.execSQL(query);
+
+        for (int i = 0; i < subjectsLists.size(); i++) {
+            String query = "UPDATE " + Subjects_Table + " SET " + past_total_classes + " = " + subjectsLists.get(i).getPast_total_classes()+
+                    " , " + past_attended_classes + " = "+ subjectsLists.get(i).getPast_attended_classes()+
+                    " WHERE " + Subject_Id + " = " + subjectsLists.get(i).getId();
+            database.execSQL(query);
+        }
+
         database.close();
 
     }
@@ -153,6 +159,22 @@ public class SubjectDatabase extends SQLiteOpenHelper {
         }
         db.close();
         return SubjectName;
+    }
+
+    public void resetAttendance(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ArrayList<SubjectsList> subjectsLists = getAllSubjects();
+        int reset_Attendance =0;
+
+        for (int i = 0; i < subjectsLists.size(); i++) {
+                subjectsLists.get(i).setPast_total_classes(0);
+                subjectsLists.get(i).setPast_attended_classes(0);
+
+        }
+        addPastAttendace(subjectsLists);
+
+
+        db.close();
     }
 
     public boolean exportData() {

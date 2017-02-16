@@ -91,10 +91,12 @@ public class DetailedAnalysisActivity extends AppCompatActivity {
 
 
 
-        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
+//        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+//                Settings.Secure.ANDROID_ID);
+
+
         NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView);
-        nativeExpressAdView.loadAd(new AdRequest.Builder().addTestDevice(android_id).build());
+        nativeExpressAdView.loadAd(new AdRequest.Builder().build());
     }
 
     @Override

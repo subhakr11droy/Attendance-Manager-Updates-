@@ -33,11 +33,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -68,7 +70,6 @@ import dotinc.attendancemanager2.Utils.SubjectDatabase;
 import dotinc.attendancemanager2.Utils.TimeTableDatabase;
 
 import static java.security.AccessController.getContext;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -114,12 +115,10 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter exadapter, mainadapter;
     private Boolean exclViewOpen = false, attAllViewOpen = false;
 
-
-
-
     //ADS
 
     private AdView mAdView;
+
     void instantiate() {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -202,24 +201,13 @@ public class MainActivity extends AppCompatActivity {
         else
             extraEmptyView.setVisibility(View.INVISIBLE);
 
-        /*
-            REMOVE THIS LINE
-         */
-        subjectDatabase.addPastAttendace(1,3,7);
-        subjectDatabase.addPastAttendace(2,1,2);
-        //launchBroadcast();
+
+//        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+//                Settings.Secure.ANDROID_ID);
 
 
-//        mAdView = (AdView) findViewById(R.id.adView);
-        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
-//        AdRequest adRequest = new AdRequest.Builder()
-////                            .addTestDevice(android_id)
-//                            .build();
-//
-//        mAdView.loadAd(adRequest);
         NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView);
-        nativeExpressAdView.loadAd(new AdRequest.Builder().addTestDevice(android_id).build());
+        nativeExpressAdView.loadAd(new AdRequest.Builder().build());
         nativeExpressAdView.setAdListener(new AdListener() {
             @Override
             public void onAdFailedToLoad(int i) {
@@ -237,25 +225,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void launchBroadcast() {
-
-        Intent intent1 = new Intent(MainActivity.this, ReminderBroadcastReciever.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0,intent1, PendingIntent.FLAG_UPDATE_CURRENT);
-
-            Log.d("option_noti","here");
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.HOUR_OF_DAY, 19);
-            calendar.set(Calendar.MINUTE, 34);
-            calendar.set(Calendar.SECOND, 55);
-
-            AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(MainActivity.this.ALARM_SERVICE);
-            am.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
-
-
-
-
-
-    }
 
     public void showSnackbar(String message) {
         Snackbar.make(root, message, Snackbar.LENGTH_SHORT).show();
@@ -325,8 +294,8 @@ public class MainActivity extends AppCompatActivity {
 
         for (int pos = 0; pos < subjectsName.size(); pos++) {
             int id = subjectsName.get(pos).getId();
-            totalPresent += database.totalPresent(id)+subjectDatabase.getPastAttendedAttendance(id);
-            totalClasses += database.totalClasses(id)+subjectDatabase.getPastTotalAttendance(id);
+            totalPresent += database.totalPresent(id) + subjectDatabase.getPastAttendedAttendance(id);
+            totalClasses += database.totalClasses(id) + subjectDatabase.getPastTotalAttendance(id);
         }
         headerFragment.setOverallPerc(totalPresent, totalClasses);
     }
@@ -345,6 +314,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (Integer.parseInt(Helper.getFromPref(context, Helper.FIRST_TIME, String.valueOf(0))) == 0)
             showTutorial();
+        else if (Integer.parseInt(Helper.getFromPref(context, Helper.FIRST_TIME, String.valueOf(0))) == 1)
+            showPastAttDialog();
+
 
         pager.setAdapter(new MainViewPagerAdapter(getSupportFragmentManager(), pageList));
 
@@ -653,13 +625,43 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void closeTutorial() {
-        Helper.saveToPref(context, Helper.FIRST_TIME, String.valueOf(1));
+        Helper.saveToPref(context, Helper.FIRST_TIME, String.valueOf(2));
         appBarLayout.setVisibility(View.VISIBLE);
         CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams) fab.getLayoutParams();
         params.setAnchorId(R.id.appbar_layout);
         fab.setLayoutParams(params);
         fab.setVisibility(View.VISIBLE);
         instantiate();
+
+        //Add past attendance Here
+        showPastAttDialog();
+
+    }
+
+    void showPastAttDialog() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.custom_dialog, null);
+        builder.setView(view);
+        builder.setCancelable(false);
+        Button yes = (Button) view.findViewById(R.id.yes);
+        Button no = (Button) view.findViewById(R.id.no);
+        final AlertDialog dialog = builder.create();
+
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(context, PrevAttendanceActivity.class));
+                dialog.dismiss();
+            }
+        });
+
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
 

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="materialrangebar-1.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.appyvet/materialrangebar/1.0/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.appyvet/materialrangebar/1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.appyvet/materialrangebar/1.0/8a34f3f2a3a3714d19df967631d00bc5d263e38f/materialrangebar-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
