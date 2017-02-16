@@ -33,7 +33,7 @@
         android:layout_below="@+id/app_name"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Version: 2.0.2"
+        android:text="Version: 2.1"
         android:textColor="@color/white"
         android:textSize="15sp" />
 
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/rights"
         android:layout_centerHorizontal="true"
-        android:text="© DotInc 2016"
+        android:text="© DotInc 2017"
         android:textColor="@color/white"
         android:textSize="18sp" />
 

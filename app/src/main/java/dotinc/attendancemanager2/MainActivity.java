@@ -42,6 +42,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.daimajia.swipe.util.Attributes;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         context = MainActivity.this;
-
+        subjectDatabase = new SubjectDatabase(this);
         extraClassText = (TextView) findViewById(R.id.extra_class_text);
         extraClassText.setTypeface(Typeface.createFromAsset(getAssets(), Helper.OXYGEN_BOLD));
         fullAttText = (TextView) findViewById(R.id.full_att_text);
@@ -178,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
         timeTableList = new TimeTableList();
         database = new AttendanceDatabase(this);
         timeTableDatabase = new TimeTableDatabase(this);
-        subjectDatabase = new SubjectDatabase(this);
+
 
         dayCode = getdaycode();
         timeTableList.setDayCode(dayCode);
@@ -218,7 +219,20 @@ public class MainActivity extends AppCompatActivity {
 //
 //        mAdView.loadAd(adRequest);
         NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView);
-        nativeExpressAdView.loadAd(new AdRequest.Builder().build());
+        nativeExpressAdView.loadAd(new AdRequest.Builder().addTestDevice(android_id).build());
+        nativeExpressAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdFailedToLoad(int i) {
+                super.onAdFailedToLoad(i);
+                findViewById(R.id.adView_card).setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                findViewById(R.id.adView_card).setVisibility(View.VISIBLE);
+            }
+        });
 
 
     }
@@ -497,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
         if (!attAllViewOpen) {
             if (!exclViewOpen) {
 
-
+                findViewById(R.id.adView_card).setVisibility(View.GONE);
                 int finalRadius = Math.max(extraView.getWidth(), extraView.getHeight() + 1000);
 
                 anim = ViewAnimationUtils.createCircularReveal(extraView, cx, cY, 0, finalRadius);
@@ -507,6 +521,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onAnimationStart(Animator animation) {
                         super.onAnimationStart(animation);
                         rootEmptyView.setVisibility(View.INVISIBLE);
+                        findViewById(R.id.adView_card).setVisibility(View.GONE);
                         if (allSubjectsArrayList.size() == 0)
                             extraEmptyView.setVisibility(View.VISIBLE);
                         else
@@ -538,6 +553,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
                         extraView.setVisibility(View.INVISIBLE);
+                        findViewById(R.id.adView_card).setVisibility(View.VISIBLE);
                         if (arrayList.size() == 0)
                             rootEmptyView.setVisibility(View.VISIBLE);
 

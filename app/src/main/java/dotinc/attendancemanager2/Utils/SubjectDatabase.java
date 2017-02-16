@@ -16,7 +16,7 @@ import dotinc.attendancemanager2.Objects.TimeTableList;
  * Created by vellapanti on 18/1/16.
  */
 public class SubjectDatabase extends SQLiteOpenHelper {
-    public static final int Database_Version = 1;
+    public static final int Database_Version = 2;
     public static final String Subject_Name_Databse = "subject_name";
     public static final String Subjects_Table = "Semester_Subjects";
     public static final String Subject_Id = "subject_id";
@@ -39,10 +39,13 @@ public class SubjectDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String table_update = "ALTER TABLE " + Subjects_Table + " ADD COLUMN " + past_attended_classes + " INTEGER DEFAULT 0,"
-                        + " ADD COLUMN " + past_total_classes + " INTEGER DEFAULT 0);";
-        Log.d("option_updgrade","upgrade called");
+        Log.d("option_ver_old", String.valueOf(oldVersion));
+        Log.d("option_ver_new", String.valueOf(newVersion));
+        String table_update = "ALTER TABLE " + Subjects_Table + " ADD COLUMN " + past_attended_classes + " INTEGER DEFAULT 0";
+        String table_update_2 = "ALTER TABLE " + Subjects_Table + " ADD COLUMN " + past_total_classes + " INTEGER DEFAULT 0";
+
         db.execSQL(table_update);
+        db.execSQL(table_update_2);
     }
 
     public void addsubject(SubjectsList list) {
@@ -159,6 +162,4 @@ public class SubjectDatabase extends SQLiteOpenHelper {
     public boolean importData() {
         return Helper.importDatabase(Subject_Name_Databse);
     }
-
-
 }

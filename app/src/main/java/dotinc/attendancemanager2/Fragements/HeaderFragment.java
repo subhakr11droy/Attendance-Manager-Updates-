@@ -69,6 +69,10 @@ public class HeaderFragment extends Fragment {
         timetable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Helper.fireBaseAnalyticsLog("Checked Timetable",
+                        Helper.getFromPref(getContext(),Helper.USER_NAME,""),
+                        Helper.getFromPref(getContext(),Helper.USER_IMAGE_ID,"0"),
+                        getContext());
                 Intent intent = new Intent(getActivity(), WeeklySubjectsActivity.class);
                 intent.putExtra("view_timetable", 1);
                 startActivity(intent);

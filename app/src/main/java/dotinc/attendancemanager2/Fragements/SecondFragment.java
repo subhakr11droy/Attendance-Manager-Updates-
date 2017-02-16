@@ -72,6 +72,10 @@ public class SecondFragment extends Fragment {
         detailedAnalysis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Helper.fireBaseAnalyticsLog("Checked Detailed Analysis",
+                        Helper.getFromPref(getContext(),Helper.USER_NAME,""),
+                        Helper.getFromPref(getContext(),Helper.USER_IMAGE_ID,"0"),
+                        getContext());
                 startActivity(new Intent(getActivity(), DetailedAnalysisActivity.class));
 
             }
@@ -79,6 +83,10 @@ public class SecondFragment extends Fragment {
         go_to_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Helper.fireBaseAnalyticsLog("Checked Go To Date ",
+                        Helper.getFromPref(getContext(),Helper.USER_NAME,""),
+                        Helper.getFromPref(getContext(),Helper.USER_IMAGE_ID,"0"),
+                        getContext());
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     DatePickerDialog dialog = new DatePickerDialog(getActivity(), R.style.DialogTheme, pickerListener, year, month, day);
                     dialog.getDatePicker().setMaxDate(System.currentTimeMillis());
@@ -93,6 +101,10 @@ public class SecondFragment extends Fragment {
         overall_attendance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Helper.fireBaseAnalyticsLog("Checked Overall Attendance",
+                        Helper.getFromPref(getContext(),Helper.USER_NAME,""),
+                        Helper.getFromPref(getContext(),Helper.USER_IMAGE_ID,"0"),
+                        getContext());
                 Intent intent = new Intent(getActivity(), OverallAttendanceActivity.class);
                 startActivity(intent);
             }
@@ -100,6 +112,10 @@ public class SecondFragment extends Fragment {
         predictor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Helper.fireBaseAnalyticsLog("Checked Predictor",
+                        Helper.getFromPref(getContext(),Helper.USER_NAME,""),
+                        Helper.getFromPref(getContext(),Helper.USER_IMAGE_ID,"0"),
+                        getContext());
                 Intent intent = new Intent(getActivity(), PredictorActivity.class);
                 startActivity(intent);
             }

@@ -4,9 +4,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.widget.TextView;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,6 +41,7 @@ public class Helper {
     private static int mIndex;
     private static long mDelay;
     private static Runnable characterAdder;
+
 
     public static void saveToPref(Context context, String key, String val) {
         SharedPreferences preferences = context.getSharedPreferences(FILENAME, context.MODE_PRIVATE);
@@ -103,6 +107,8 @@ public class Helper {
         return true;
     }
 
+
+
     public static void animateText(final TextView textView, String text, long delay) {
         mHandler = new Handler();
         mIndex = 0;
@@ -136,5 +142,21 @@ public class Helper {
                 + "\nOS: " + android.os.Build.VERSION.RELEASE
                 + "\nAppVersion: "
                 + appversion + line;
+    }
+
+
+    public static void fireBaseAnalyticsLog(String name_event,String user_name,String gender,Context context){
+        FirebaseAnalytics mFirebaseAnalytics;
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(context);
+        Bundle bundle = new Bundle();
+
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name_event);
+        bundle.putString(FirebaseAnalytics.Param.CHARACTER,user_name);
+        if (gender.equals("1"))
+            bundle.putString(FirebaseAnalytics.Param.VALUE,"Male");
+        else
+            bundle.putString(FirebaseAnalytics.Param.VALUE,"Female");
+
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 }

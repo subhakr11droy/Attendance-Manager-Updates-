@@ -1,12 +1,16 @@
 package dotinc.attendancemanager2;
 
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
 
 import java.util.ArrayList;
 
@@ -41,6 +45,10 @@ public class OverallAttendanceActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new OverallAttendanceAdapter(this, arrayList);
         recyclerView.setAdapter(adapter);
+        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView);
+        nativeExpressAdView.loadAd(new AdRequest.Builder().addTestDevice(android_id).build());
     }
 
     @Override

@@ -74,7 +74,8 @@
         <receiver android:name=".Utils.ReminderBroadcastReciever" />
         <receiver android:name=".Utils.CancelIntent" />
 
-        <activity android:name=".PreviousAttendanceActivity"></activity>
+        <activity android:name=".PreviousAttendanceActivity" />
+        <activity android:name=".PrevAttendanceActivity"></activity>
     </application>
 
 </manifest>

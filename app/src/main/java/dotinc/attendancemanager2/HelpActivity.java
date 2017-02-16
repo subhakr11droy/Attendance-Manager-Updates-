@@ -1,5 +1,6 @@
 package dotinc.attendancemanager2;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 
 import dotinc.attendancemanager2.Adapters.HelpAdapter;
+import dotinc.attendancemanager2.Utils.Helper;
 
 public class HelpActivity extends AppCompatActivity {
     Toolbar toolbar;
@@ -19,13 +21,18 @@ public class HelpActivity extends AppCompatActivity {
     ArrayList<String> topicList;
     ArrayList<String> descriptionList;
     HelpAdapter adapter;
-
+    private Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         instantiate();
         addToList();
+        context = HelpActivity.this;
+        Helper.fireBaseAnalyticsLog("Checked Help section",
+                Helper.getFromPref(context,Helper.USER_NAME,""),
+                Helper.getFromPref(context,Helper.USER_IMAGE_ID,"0"),
+                context);
     }
 
     private void addToList() {

@@ -3,75 +3,120 @@
 
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.prolificinteractive/material-calendarview/0.5.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_2a235710d7c50c05360fb7d93f42c2eb830b17f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.4.0_f58f46e6478fa2542c55bd2ceaa3ba80d0a506cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gass-9.4.0_f152d45473883c3bf22e62804e062fbcefff0aae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-9.4.0_902b2e092be889f3f10c698627a46208a3fe6dd1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.daimajia.swipelayout/library/1.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e84b30031d4bab89a2b5c45af4eb9213828524dd">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.daimajia.swipelayout-library-1.2.0_97f146e68d04753032b598212bb4d7d1ebf85b0d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.prolificinteractive/material-calendarview/0.5.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="dfac2d72691c0eff0a1defff7f1fa4df90746f78">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.prolificinteractive-material-calendarview-0.5.0_175de099abba27568ce11a5d891ef1bf06bd1c10.jar" />
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.prolificinteractive-material-calendarview-0.5.0_d9b97df64899f3845a7937d08083f4f5b8723781.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.roomorama/caldroid/2.3.1/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="7d1b55d7a57b3212b21718d9a77b0ac40ab4f103">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.roomorama-caldroid-2.3.1_f7b559259d79acee784f391194486f9af850864c.jar" />
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.4.0_f054b869bd05835f242e06ea189e04c762e1d355.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-clearcut-9.4.0_b5739b89742ddc163d2e4b580fa99780e62b0b5f.jar" />
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_fb99c1e04f6677e797e24108d98ba66f94746ebc.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.4.0_f19c4469bdc000d5bac7c9b2fa63815d06425e8b.jar" />
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.4.0_c2f339d994f70060411c804fb9f11f93d74978f7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.github.rey5137/material/1.2.2/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="dde1ea8573633db3da4e8c42d541bfa7d03d6720">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.github.rey5137-material-1.2.2_31f3cffbb6ec9f789665e98913bd48f9718622a5.jar" />
+        sha1="3b7173b3df4c7029699919414400041f64519e34">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.4.0_b8ae0410961d876d757c30bbb0ac4cb05ec12fa0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.4.0_157d860b168ce82d437507d2a400f09f7933a581.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_fafa0d07dfedc220d510e879c2ed130d6b8d7857.jar" />
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_9ccf3647378581edf563854f565135fc0f21bedd.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.github.rey5137/material/1.2.2/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_226bbf57b843f9151dc6207c1136eb723af318b7.jar" />
+        sha1="dde1ea8573633db3da4e8c42d541bfa7d03d6720">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.github.rey5137-material-1.2.2_5e4e671c6337db86f49e24607745d80d796277c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.roomorama/caldroid/2.3.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="7d1b55d7a57b3212b21718d9a77b0ac40ab4f103">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.roomorama-caldroid-2.3.1_3458a5c77603511c7947c1c3096c616d3ec90e15.jar" />
     </item>
     <item
         is-multidex="false"
@@ -80,70 +125,97 @@
         optimize="true"
         revision="23.0.2"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_15c3e0f479c57c6af86b3654fcf8b4dd0a2ff04d.jar" />
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_15c3e0f479c57c6af86b3654fcf8b4dd0a2ff04d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_457f7e2097d9b1129e62baeb90df35c77cf97dbf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.4.0_a6a7915ba9f32dac46d9bb4a51e4cfe14fae4159.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_66139bba5f628b56fc48a566c00d9a7f717586db.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-9.4.0_6004976f4cc5f5fe2f5ab8fe68e9dda4f3e3ca4a.jar" />
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-9.4.0_3a9d21b7a897097934da40a3b6e45d2c50d46f8e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.4.0_f6eac5db63679a54d0b5ea97889a9327b7fe8a0d.jar" />
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_f48c9200f89a29c45ccea26c9d8bc4b8627c682a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.4.0_d450b3d590dd3853d7a3a88080b9702095884745.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_5480c02c3f025e8db27a54ab21d5cf6ae21af3ad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.appyvet/materialrangebar/1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="896a608d2350629057d623e18e0b2b32e19591fb">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.appyvet-materialrangebar-1.0_c255380876a8971f8366c04e11c7be16f935fce2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_28e84169971d20088dce8fca1a9a114a688b1564.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_855abb1078bf53934a39c54c9ba6c6de69655a3e.jar" />
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_7129773258757872cd1ee82b7ddec207b44c2d28.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_4d1b96af581f78fcee9b7613269bc86592ef34f4.jar" />
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_458602a702a96d7426fd76de0c30cf95709e7a32.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.4.0_48baf76edb2a4726f5261272eee0e9a78aea7727.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.4.0_f2a728f3cf042c544bd9da4b30b545b5d01c2092.jar" />
     </item>
     <item
         is-multidex="false"
@@ -152,88 +224,16 @@
         optimize="true"
         revision="23.0.2"
         sha1="7b52de513f87ae4d9ff5d17518def0a1e9bc3df0">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/hirondelle-date4j-1.5.1_e9d1351f943fc46058879e0f077dfab314236ed4.jar" />
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/hirondelle-date4j-1.5.1_e9d1351f943fc46058879e0f077dfab314236ed4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.4.0/jars/classes.jar"
+        jar="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.4.0_ac1c1753c8e7d8f298f3ee68007025bd26d46d4a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_5db5d54fa280e723789c70976ca265e1759acbea.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_b74914112b0690a2353e71e1d23deec617a7c618.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gass-9.4.0_a5788cf4c7f46111db576f30c910f5202d509460.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.appyvet/materialrangebar/1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="896a608d2350629057d623e18e0b2b32e19591fb">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.appyvet-materialrangebar-1.0_3c2662ed00694d978d41d3cfcd4ca57d5b5fec4f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-9.4.0_4218e096b4d177121ece9988c1b7f18ace8c2664.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.4.0_1ce9d780b5cde7d0a03fdd09f4a9f64d62d51954.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3b7173b3df4c7029699919414400041f64519e34">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.4.0_fa5ac73e691b340c2bd9fc84ee6b51e5fbfd17a1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/exploded-aar/com.daimajia.swipelayout/library/1.2.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="e84b30031d4bab89a2b5c45af4eb9213828524dd">
-        <dex dex="/home/vellapanti/AndroidStudioProjects/AttendanceManager-master/app/build/intermediates/pre-dexed/debug/com.daimajia.swipelayout-library-1.2.0_43a75aa3efec04ffe01cf4c9e54ed4fbbe264e9a.jar" />
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="/home/vellapanti/AndroidStudioProjects/Attendance-Manager-Updates-/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-clearcut-9.4.0_2d0e8f1a9207e0b38d816c66db8fef54de02566f.jar" />
     </item>
 
 </items>

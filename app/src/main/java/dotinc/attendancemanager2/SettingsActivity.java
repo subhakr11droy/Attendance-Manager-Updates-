@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
@@ -27,6 +28,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
 import com.rey.material.widget.Switch;
 
 import java.io.File;
@@ -71,6 +74,11 @@ public class SettingsActivity extends AppCompatActivity implements AdapterView.O
         if (Integer.parseInt(Helper.getFromPref(context, Helper.NEEDBREAK, String.valueOf(-1))) == 1) {
             bunk_switch.setChecked(true);
         }
+
+        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView);
+        nativeExpressAdView.loadAd(new AdRequest.Builder().addTestDevice(android_id).build());
     }
 
     @Override

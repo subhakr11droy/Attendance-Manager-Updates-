@@ -3,6 +3,7 @@ package dotinc.attendancemanager2;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
@@ -85,6 +88,13 @@ public class DetailedAnalysisActivity extends AppCompatActivity {
 
         for (int pos = 0; pos < subjectsLists.size(); pos++)
             subjects.add(subjectsLists.get(pos).getSubjectName());
+
+
+
+        String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        NativeExpressAdView nativeExpressAdView = (NativeExpressAdView) findViewById(R.id.adView);
+        nativeExpressAdView.loadAd(new AdRequest.Builder().addTestDevice(android_id).build());
     }
 
     @Override
