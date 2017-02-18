@@ -69,13 +69,13 @@
         <activity
             android:name=".PredictorActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".PrevAttActivity" />
+        <activity
+            android:name=".PrevAttendanceActivity"
+            android:screenOrientation="portrait" />
 
         <receiver android:name=".Utils.ReminderBroadcastReciever" />
         <receiver android:name=".Utils.CancelIntent" />
 
-        <activity android:name=".PreviousAttendanceActivity" />
-        <activity android:name=".PrevAttendanceActivity"></activity>
     </application>
 
 </manifest>

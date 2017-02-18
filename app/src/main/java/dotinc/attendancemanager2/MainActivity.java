@@ -314,8 +314,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (Integer.parseInt(Helper.getFromPref(context, Helper.FIRST_TIME, String.valueOf(0))) == 0)
             showTutorial();
-        else if (Integer.parseInt(Helper.getFromPref(context, Helper.FIRST_TIME, String.valueOf(0))) == 1)
+        else if (Integer.parseInt(Helper.getFromPref(context, Helper.FIRST_TIME, String.valueOf(0))) == 1) {
+            Helper.saveToPref(context, Helper.FIRST_TIME, String.valueOf(2));
             showPastAttDialog();
+        }
 
 
         pager.setAdapter(new MainViewPagerAdapter(getSupportFragmentManager(), pageList));

@@ -89,22 +89,27 @@ public class ShowNameCardActivity extends AppCompatActivity {
                 + Helper.getFromPref(context, Helper.ATTENDANCE_CRITERIA, String.valueOf(0)) + "%");
 
         progressBar.setVisibility(View.VISIBLE);
-        checkForPermission();
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//                if (checkPrevData()) {
-//                    showImport();
-//                } else {
-//                    startActivity(new Intent(context, SubjectsActivity.class)
-//                            .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-//                    finish();
-//                }
-//
-//
-//            }
-//        }, 2500);
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            checkForPermission();
+        }else {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    if (checkPrevData()) {
+                        showImport();
+                    } else {
+                        startActivity(new Intent(context, SubjectsActivity.class)
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        finish();
+                    }
+
+
+                }
+            }, 2500);
+        }
+
     }
 
     @Override

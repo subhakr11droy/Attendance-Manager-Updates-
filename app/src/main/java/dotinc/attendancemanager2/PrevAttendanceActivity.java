@@ -41,9 +41,9 @@ public class PrevAttendanceActivity extends AppCompatActivity {
         pastRecycler.setLayoutManager(new LinearLayoutManager(context));
         subjectDatabase = new SubjectDatabase(this);
         subjectsLists = subjectDatabase.getAllSubjects();
-        for (int i = 0; i < subjectsLists.size(); i++) {
-            Log.d("Lsit", subjectsLists.get(i).getSubjectName() + "  atte-" + subjectsLists.get(i).getPast_attended_classes() + "tot-" + subjectsLists.get(i).getPast_total_classes());
-        }
+//        for (int i = 0; i < subjectsLists.size(); i++) {
+//            Log.d("Lsit", subjectsLists.get(i).getSubjectName() + "  atte-" + subjectsLists.get(i).getPast_attended_classes() + "tot-" + subjectsLists.get(i).getPast_total_classes());
+//        }
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.root);
 
         oxyBold = Typeface.createFromAsset(getAssets(), Helper.OXYGEN_BOLD);
@@ -72,7 +72,6 @@ public class PrevAttendanceActivity extends AppCompatActivity {
         adapter = new PrevAttRecyclerAdapter(context, subjectsLists);
         pastRecycler.setAdapter(adapter);
     }
-
 
     void savePastAddendance() {
         saveList = adapter.retriveUpdatedAttendance();

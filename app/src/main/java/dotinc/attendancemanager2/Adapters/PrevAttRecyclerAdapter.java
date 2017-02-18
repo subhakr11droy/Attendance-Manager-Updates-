@@ -71,16 +71,26 @@ public class PrevAttRecyclerAdapter extends RecyclerView.Adapter<PrevAttRecycler
             public void afterTextChanged(Editable editable) {
                 Log.d("options", editable.toString() + "" + position);
                 SubjectsList list = saveList.get(position);
-                if (!editable.toString().equals("")) {
-                    int attend = Integer.parseInt(editable.toString());
-                    if (attend > list.getPast_total_classes()) {
+                String input = editable.toString();
+                if (!input.equals("")) {
+                    if (input.startsWith("0")) {
                         holder.errorText.setVisibility(View.VISIBLE);
-                        holder.errorText.setText("Attended cannot be greater than total");
+                        holder.errorText.setText("Number cannot start with 0");
                         array[position] = false;
                     } else {
-                        saveList.get(position).setPast_attended_classes(attend);
-                        holder.errorText.setVisibility(View.GONE);
-                        array[position] = true;
+                        int attend = Integer.parseInt(input);
+                        Log.d("option_attended_past_e", String.valueOf(attend));
+                        if (attend > list.getPast_total_classes()) {
+                            holder.errorText.setVisibility(View.VISIBLE);
+                            saveList.get(position).setPast_attended_classes(attend);
+                            holder.errorText.setText("Attended cannot be greater than total");
+                            array[position] = false;
+                        } else {
+                            saveList.get(position).setPast_attended_classes(attend);
+                            holder.errorText.setVisibility(View.GONE);
+                            array[position] = true;
+                            Log.d("option_attended_past_ef", String.valueOf(saveList.get(position).getPast_attended_classes()));
+                        }
                     }
                 } else {
                     holder.errorText.setVisibility(View.GONE);
@@ -104,16 +114,23 @@ public class PrevAttRecyclerAdapter extends RecyclerView.Adapter<PrevAttRecycler
             public void afterTextChanged(Editable editable) {
                 Log.d("options", editable.toString() + "" + position);
                 SubjectsList list = saveList.get(position);
-                if (!editable.toString().equals("")) {
-                    int total = Integer.parseInt(editable.toString());
-                    if (total >= list.getPast_attended_classes()) {
-                        saveList.get(position).setPast_total_classes(total);
-                        holder.errorText.setVisibility(View.GONE);
-                        array[position] = true;
-                    } else {
+                String input = editable.toString();
+                if (!input.equals("")) {
+                    int total = Integer.parseInt(input);
+                    if (input.startsWith("0")) {
                         holder.errorText.setVisibility(View.VISIBLE);
-                        holder.errorText.setText("Total can't be less than attended");
+                        holder.errorText.setText("Number cannot start with 0");
                         array[position] = false;
+                    } else {
+                        if (total >= list.getPast_attended_classes()) {
+                            saveList.get(position).setPast_total_classes(total);
+                            holder.errorText.setVisibility(View.GONE);
+                            array[position] = true;
+                        } else {
+                            holder.errorText.setVisibility(View.VISIBLE);
+                            holder.errorText.setText("Total can't be less than attended");
+                            array[position] = false;
+                        }
                     }
                 } else {
                     holder.errorText.setVisibility(View.GONE);
@@ -157,8 +174,7 @@ public class PrevAttRecyclerAdapter extends RecyclerView.Adapter<PrevAttRecycler
                 break;
             }
         }
-        if (flag == 0)
-            return null;
+        if (flag == 0) return null;
         return saveList;
     }
 }

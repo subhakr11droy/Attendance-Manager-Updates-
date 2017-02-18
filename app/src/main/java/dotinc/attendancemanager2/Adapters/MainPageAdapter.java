@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import dotinc.attendancemanager2.ExtraClassActivity;
 import dotinc.attendancemanager2.GoToDateActivity;
 import dotinc.attendancemanager2.MainActivity;
 import dotinc.attendancemanager2.Objects.AttendanceList;
+import dotinc.attendancemanager2.Objects.SubjectsList;
 import dotinc.attendancemanager2.Objects.TimeTableList;
 import dotinc.attendancemanager2.R;
 import dotinc.attendancemanager2.Utils.AttendanceDatabase;
@@ -98,9 +100,13 @@ public class MainPageAdapter extends RecyclerSwipeAdapter<MainPageAdapter.Attend
             viewHolder.check_mark.setColorFilter(ContextCompat.getColor(context, R.color.backgroundColor));
         }
         markerValue = 2;
+
+
+
+
         int attendedClasses = database.totalPresent(id) + subjectDatabase.getPastAttendedAttendance(id);
         int totalClasses = database.totalClasses(id) + subjectDatabase.getPastTotalAttendance(id);
-
+        Log.d("option_attended_main", String.valueOf(attendedClasses));
         float percentage = ((float) attendedClasses / (float) totalClasses) * 100;
         classesNeeded(attendedClasses, totalClasses, percentage, viewHolder);
 

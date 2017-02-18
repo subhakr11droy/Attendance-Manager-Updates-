@@ -96,10 +96,18 @@ public class SubjectDatabase extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getWritableDatabase();
 
         for (int i = 0; i < subjectsLists.size(); i++) {
-            String query = "UPDATE " + Subjects_Table + " SET " + past_total_classes + " = " + subjectsLists.get(i).getPast_total_classes()+
-                    " , " + past_attended_classes + " = "+ subjectsLists.get(i).getPast_attended_classes()+
-                    " WHERE " + Subject_Id + " = " + subjectsLists.get(i).getId();
+            Log.d("option_attended_past", String.valueOf(subjectsLists.get(i).getPast_attended_classes()));
+//            String query = "UPDATE " + Subjects_Table + " SET " + past_total_classes + " = " + subjectsLists.get(i).getPast_total_classes()+
+//                    " , " + past_attended_classes + " = "+ subjectsLists.get(i).getPast_attended_classes()+
+//                    " WHERE " + Subject_Id + " = " + subjectsLists.get(i).getId();
+            String query = "UPDATE " + Subjects_Table + " SET " + past_total_classes + " = " +
+                            subjectsLists.get(i).getPast_total_classes()+
+                            " WHERE " + Subject_Id + " = " + subjectsLists.get(i).getId();
+            String query2 = "UPDATE " + Subjects_Table + " SET " + past_attended_classes + " = " +
+                            subjectsLists.get(i).getPast_attended_classes()+
+                            " WHERE " + Subject_Id + " = " + subjectsLists.get(i).getId();
             database.execSQL(query);
+            database.execSQL(query2);
         }
 
         database.close();
@@ -109,29 +117,48 @@ public class SubjectDatabase extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getWritableDatabase();
         String query = "SELECT "+ past_total_classes +" FROM "+ Subjects_Table +
                 " WHERE " +Subject_Id + " = "+subject_id;
-        int past_total_attendace =0;
+        int past_total_attendance =0;
         Cursor cursor = database.rawQuery(query , null);
 
              while (cursor.moveToNext()){
-                 past_total_attendace = cursor.getInt(0);
+                 past_total_attendance = cursor.getInt(0);
              }
-        Log.d("option_tot", String.valueOf(past_total_attendace));
-        return  past_total_attendace;
+
+        return  past_total_attendance;
     }
     public int getPastAttendedAttendance(int subject_id){
         SQLiteDatabase database = this.getWritableDatabase();
         String query = "SELECT "+ past_attended_classes +" FROM "+ Subjects_Table +
                 " WHERE " +Subject_Id + " = "+subject_id;
-        int past_attended_attendace =0;
+        int past_attended_attendance =0;
         Cursor cursor = database.rawQuery(query , null);
 
         while (cursor.moveToNext()){
-            past_attended_attendace = cursor.getInt(0);
+            past_attended_attendance = cursor.getInt(0);
         }
-        Log.d("option_attende", String.valueOf(past_attended_attendace));
-        return  past_attended_attendace;
+        Log.d("option_attende", String.valueOf(past_attended_attendance));
+        return  past_attended_attendance;
     }
+    public ArrayList<SubjectsList>getPastAttendance(){
+        ArrayList<SubjectsList> subjects_past_attendance = new ArrayList<SubjectsList>();
+        String query = "SELECT * FROM " + Subjects_Table;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor.moveToNext()) {
+            do {
+                SubjectsList subjectsList = new SubjectsList();
+                subjectsList.setId(cursor.getInt(0));
+                subjectsList.setSubjectName(cursor.getString(1));
+                subjectsList.setPast_attended_classes(cursor.getInt(2));
+                subjectsList.setPast_total_classes(cursor.getInt(3));
+                subjects_past_attendance.add(subjectsList);
 
+            } while (cursor.moveToNext());
+        }
+        db.close();
+
+        return subjects_past_attendance;
+    }
 
     public void addMultipleSubjects(ArrayList<String> subjects) {
         SQLiteDatabase database = this.getWritableDatabase();
